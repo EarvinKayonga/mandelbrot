@@ -7,8 +7,8 @@ use raster::{Color, Image};
 
 fn main() -> Result<(), Error> {
     let output = "out.png";
-    let width = 2048;
-    let height = 2048;
+    let width = 1024;
+    let height = 1024;
 
     let file = create_file(width, height);
     let image = paint_pixels(file);
@@ -41,8 +41,8 @@ fn paint_pixels(mut image: Image) -> Image {
 }
 
 fn calculate_color(col: i32, line: i32, width: i32, height: i32) -> Color {
-    let complexity = 4096.0;
-    let max_i = 1000;
+    let complexity = 8192.0;
+    let max_i = 20000;
 
     let (mut x, mut y) = (0.0, 0.0);
 
@@ -61,7 +61,7 @@ fn calculate_color(col: i32, line: i32, width: i32, height: i32) -> Color {
 }
 
 fn gray(scale: u8) -> Color {
-    Color::rgba(180, 180, 180, scale)
+    Color::rgba(0, 0, 0, scale)
 }
 
 fn norm(x: i32, total: i32, min: f64, max: f64) -> f64 {

@@ -1,7 +1,9 @@
 [package]
 name = "mandelbrot"
 version = "0.1.0"
-authors = ["Earvin Kayonga <ekayonga@ventadis.fr>"]
+publish = false
+authors = ["Earvin Kayonga <earvin@earvinkayonga.com>"]
+description = "Generating fractal image"
 
 [dependencies]
 raster = "^0.2"
